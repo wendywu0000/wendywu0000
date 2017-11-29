@@ -1,0 +1,11 @@
+.disclaimer{
+    text-align:right;
+    cursor: pointer;
+    text-decoration: underline;
+    color:blue;
+}
+
+.from, .to{
+    padding-bottom:5px;
+    padding-top:5px;
+}

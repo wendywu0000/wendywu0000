@@ -1,0 +1,36 @@
+<div>
+
+    <div class="from">Type in amount and select Currency</div>
+    <div class="error">{{error}}</div>
+    <label for="fromAmount"></label>
+    <input id="fromAmount" type="number" [(ngModel)]="fromAmount" (ngModelChange)="calculate(false)" />
+
+    <label for="fromCurrency"></label>
+    <select id="fromCurrency" [(ngModel)]="fromCurrency" (ngModelChange)="convert(false, false)">
+        <option *ngFor="let rate of rates" [value]="rate.id">{{ rate.id }}</option>
+    </select>
+    <div class="to">Converted Amount</div>
+    <label for="toAmount"></label>
+    <input id="toAmount" type="number" [(ngModel)]="toAmount" (ngModelChange)="calculate(true)">
+    <label for="toCurrency"></label>
+    <select id="toCurrency" [(ngModel)]="toCurrency" (ngModelChange)="calculate(true)">
+        <option *ngFor="let rate of rates" [value]="rate.id">{{ rate.id }}</option>
+    </select>
+    <div class="disclaimer" (click)="modal.open()">Disclaimer</div>
+
+</div>
+
+<modal #modal>
+    <modal-header>
+        <h1>Rate Information</h1>
+    </modal-header>
+    <modal-content>
+
+        <div *ngFor="let rate of rates">
+            {{ rate.id }} : {{rate.value}}
+        </div>
+    </modal-content>
+    <modal-footer>
+        <button class="btn btn-primary" (click)="model.close()">okay!</button>
+    </modal-footer>
+</modal>
