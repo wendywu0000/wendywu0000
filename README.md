@@ -9,6 +9,9 @@ https://nodejs.org/en/download/
 
 npm install -g angular-cli
 
+intall ng2-modal
+npm install ng2-modal --save
+
 run npm start
 Navigate to " http://localhost:4200"
 
