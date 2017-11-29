@@ -2,6 +2,20 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
+## Getting Started
+
+Intall node.js
+https://nodejs.org/en/download/
+
+npm install -g angular-cli
+
+run npm start
+Navigate to " http://localhost:4200"
+
+## Notes:
+Since bootstrap is not accepted here, couldn't find userful tutorial for Lightning Design System for the styling within limited, 
+	the styling for those buttons is not being done.
+	The scss file are being created, but the css file are not generated from scss file since the css file is very simple.
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
